@@ -10,12 +10,15 @@ shift %= 26
 # membuat list of ALPHABETS
 ALPHABETS = string.ascii_lowercase
 """
-kebalikan dari shifted, mereka mundur, 
-dari defghijklmnopqrstuvwxyzabc menjadi 
+kebalikan dari shifted, mereka mundur,
+dari defghijklmnopqrstuvwxyzabc menjadi
 abcdefghijklmnopqrstuvwxyz ketika dimundur 3
 """
 unshifted = ALPHABETS[-shift:] + ALPHABETS[:-shift]
-# guna maketrans ialah mengganti huruf yang ter-encrypted dengan huruf yang akan dimundur (contoh, d menjadi a)
+"""
+guna maketrans ialah mengganti huruf yang ter-encrypted
+dengan huruf yang akan dimundur (contoh, d menjadi a)
+"""
 tableunshift = str.maketrans(ALPHABETS, unshifted)
 # mengksekusikan shifted/encrypt text menjadi plain/decrypt text
 decrypted = encrypted.translate(tableunshift)
