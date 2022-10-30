@@ -4,9 +4,8 @@ import string
 encrypted = (input("Enter the encrypted text: ").lower())
 # masukan berapa angka untuk diputar
 shift = int(input("Enter the shift: "))
-# karena alphabet hanya terdapat 26 huruf maka kita gunakan modulus
+# karena alphabets hanya terdapat 26 huruf maka kita gunakan modulus
 shift %= 26
-
 # membuat list of alphabets
 alphabets = string.ascii_lowercase
 
