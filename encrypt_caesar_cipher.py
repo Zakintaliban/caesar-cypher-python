@@ -9,9 +9,11 @@ shift = int(input("Enter the shift: "))
 shift %= 26
 # membuat list ALPHABETS
 ALPHABETS = string.ascii_lowercase
-
-# membuat list ALPHABETS diputar jadi contoh, 
-# abcdefghijklmnopqrstuvwxyz di beri shift 3, menjadi defghijklmnopqrstuvwxyzabc
+"""
+membuat list ALPHABETS diputar jadi contoh,
+abcdefghijklmnopqrstuvwxyz di beri shift 3, menjadi
+defghijklmnopqrstuvwxyzabc
+"""
 shifted = ALPHABETS[shift:] + ALPHABETS[:shift]
 # guna maketrans ialah mengganti huruf yang di input
 # dengan huruf yang sudah diputar (contoh, a menjadi d)
